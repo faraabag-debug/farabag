@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FaraBag | کیف‌های لوکس زنانه</title>
+
+  <title>FaraBag | کیف‌های خاص و لوکس</title>
 
   <style>
     * {
@@ -13,141 +14,525 @@
     }
 
     body {
-      background: #090909;
-      color: #fff;
-      font-family: Arial, sans-serif;
+      font-family: Tahoma, Arial, sans-serif;
+      background: #fff9f5;
+      color: #3d3030;
+      line-height: 1.8;
     }
 
+    /* HEADER */
     header {
-      padding: 25px 20px;
-      text-align: center;
-      border-bottom: 1px solid #b99a5b;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid #f3ded7;
+    }
+
+    .nav {
+      max-width: 1150px;
+      margin: auto;
+      padding: 18px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
     .logo {
-      color: #d6b66a;
-      font-size: 34px;
+      font-size: 30px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      color: #c78b52;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: #654b4b;
+      margin-right: 22px;
       font-weight: bold;
-      letter-spacing: 3px;
     }
 
-    .subtitle {
-      margin-top: 8px;
-      color: #ccc;
-      font-size: 14px;
-    }
-
+    /* HERO */
     .hero {
-      min-height: 80vh;
+      min-height: 680px;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 40px 20px;
-      text-align: center;
+      padding: 70px 20px;
+      background:
+        radial-gradient(circle at 15% 20%, #ffdfe5 0, transparent 30%),
+        radial-gradient(circle at 85% 80%, #ffe6c9 0, transparent 32%),
+        #fff9f5;
     }
 
-    .hero h1 {
-      color: #d6b66a;
-      font-size: 32px;
-      margin-bottom: 10px;
+    .hero-content {
+      max-width: 1150px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 55px;
+      align-items: center;
     }
 
-    .hero p {
-      color: #ccc;
-      margin-bottom: 28px;
+    .hero-text h1 {
+      font-size: clamp(42px, 6vw, 78px);
+      line-height: 1.1;
+      color: #5b3e42;
+      margin-bottom: 20px;
     }
 
-    /* عکس اصلی FaraBag */
-    .product-image {
-      width: min(90%, 520px);
-      max-height: 620px;
-      object-fit: contain;
-      border-radius: 18px;
-      border: 1px solid #b99a5b;
-      box-shadow: 0 0 40px rgba(214, 182, 106, 0.25);
+    .hero-text h1 span {
+      color: #d79b62;
+    }
+
+    .hero-text p {
+      font-size: 19px;
+      color: #806c6c;
+      margin-bottom: 30px;
+      max-width: 520px;
+    }
+
+    .gold-line {
+      width: 90px;
+      height: 4px;
+      background: #d9a15f;
+      border-radius: 20px;
+      margin-bottom: 25px;
     }
 
     .buttons {
-      margin-top: 28px;
       display: flex;
-      gap: 12px;
+      gap: 14px;
       flex-wrap: wrap;
-      justify-content: center;
     }
 
     .btn {
       display: inline-block;
-      padding: 14px 28px;
+      padding: 14px 25px;
       border-radius: 30px;
       text-decoration: none;
       font-weight: bold;
-      transition: 0.3s;
+      transition: .3s;
     }
 
-    .instagram {
-      background: #d6b66a;
-      color: #111;
+    .btn-primary {
+      background: #df9a9e;
+      color: white;
+      box-shadow: 0 10px 25px rgba(223,154,158,.3);
     }
 
-    .contact {
-      border: 1px solid #d6b66a;
-      color: #d6b66a;
-    }
-
-    .btn:hover {
+    .btn-primary:hover {
       transform: translateY(-3px);
     }
 
-    footer {
+    .btn-secondary {
+      border: 1px solid #d9a15f;
+      color: #9a6a35;
+      background: white;
+    }
+
+    /* PRODUCT IMAGE */
+    .hero-image {
+      position: relative;
       text-align: center;
-      padding: 25px;
-      color: #888;
-      border-top: 1px solid #222;
-      font-size: 13px;
+    }
+
+    .hero-image::before {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      background: #ffe4e7;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 0;
+    }
+
+    .hero-image img {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 500px;
+      max-height: 520px;
+      object-fit: contain;
+      border-radius: 28px;
+      box-shadow: 0 25px 60px rgba(110,70,60,.16);
+    }
+
+    /* PRODUCTS */
+    .products {
+      padding: 90px 20px;
+      background: #ffffff;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 38px;
+      color: #5b3e42;
+    }
+
+    .section-title p {
+      color: #9a8585;
+    }
+
+    .product-grid {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .card {
+      background: #fffaf8;
+      border: 1px solid #f1dfda;
+      border-radius: 25px;
+      overflow: hidden;
+      padding-bottom: 22px;
+      transition: .3s;
+      box-shadow: 0 12px 30px rgba(100,60,60,.06);
+    }
+
+    .card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 20px 40px rgba(100,60,60,.12);
+    }
+
+    .card-image {
+      height: 330px;
+      background: #fff0ed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 18px 20px 0;
+    }
+
+    .card h3 {
+      color: #5b3e42;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: #917d7d;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    /* ABOUT */
+    .about {
+      padding: 90px 20px;
+      background: linear-gradient(135deg, #fff0ed, #fffaf2);
+      text-align: center;
+    }
+
+    .about-box {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .about h2 {
+      font-size: 38px;
+      color: #5b3e42;
+      margin-bottom: 18px;
+    }
+
+    .about p {
+      color: #786565;
+      font-size: 17px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #fff;
+      border-top: 1px solid #f0ddd8;
+      text-align: center;
+      padding: 35px 20px;
+    }
+
+    footer .logo {
+      margin-bottom: 10px;
+    }
+
+    footer p {
+      color: #8e7a7a;
+      font-size: 14px;
+    }
+
+    .social {
+      margin-top: 15px;
+    }
+
+    .social a {
+      color: #c98589;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* MOBILE */
+    @media (max-width: 800px) {
+
+      .nav {
+        padding: 15px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 55px 18px;
+      }
+
+      .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .gold-line {
+        margin: 0 auto 22px;
+      }
+
+      .hero-text p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .buttons {
+        justify-content: center;
+      }
+
+      .hero-image::before {
+        width: 290px;
+        height: 290px;
+      }
+
+      .product-grid {
+        grid-template-columns: 1fr;
+        max-width: 430px;
+      }
+
+      .section-title h2,
+      .about h2 {
+        font-size: 30px;
+      }
     }
   </style>
 </head>
 
 <body>
 
+  <!-- HEADER -->
   <header>
-    <div class="logo">FaraBag</div>
-    <div class="subtitle">کیف‌های خاص و لوکس زنانه</div>
+    <div class="nav">
+
+      <div class="logo">FaraBag</div>
+
+      <div class="nav-links">
+        <a href="#home">خانه</a>
+        <a href="#products">محصولات</a>
+        <a href="#about">درباره ما</a>
+        <a href="https://www.instagram.com/faraa.bag" target="_blank">
+          اینستاگرام
+        </a>
+      </div>
+
+    </div>
   </header>
 
-  <main class="hero">
+  <!-- HERO -->
+  <section class="hero" id="home">
 
-    <h1>FaraBag</h1>
-    <p>انتخابی برای خاص‌پسندها</p>
+    <div class="hero-content">
 
-    <!-- تصویر اصلی محصول -->
-    <img
-      class="product-image"
-      src="farabag1.jpeg"
-      alt="کیف لوکس FaraBag">
+      <div class="hero-text">
 
-    <div class="buttons">
+        <div class="gold-line"></div>
 
-      <a
-        class="btn instagram"
-        href="https://www.instagram.com/faraa.bag"
-        target="_blank">
-        Instagram
-      </a>
+        <h1>
+          زیبایی در<br>
+          <span>جزئیات</span>
+        </h1>
 
-      <a
-        class="btn contact"
-        href="tel:09023631213">
-        تماس با ما
+        <p>
+          مجموعه‌ای خاص از کیف‌های شیک و متفاوت
+          برای استایل‌هایی که قرار است دیده شوند.
+        </p>
+
+        <div class="buttons">
+
+          <a class="btn btn-primary"
+             href="https://www.instagram.com/faraa.bag"
+             target="_blank">
+            مشاهده محصولات
+          </a>
+
+          <a class="btn btn-secondary"
+             href="#about">
+            درباره FaraBag
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="hero-image">
+
+        <img src="farabag1.jpeg"
+             alt="FaraBag Luxury Handbag">
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="products" id="products">
+
+    <div class="section-title">
+
+      <h2>محصولات منتخب</h2>
+
+      <p>
+        انتخابی خاص برای استایل خاص شما
+      </p>
+
+    </div>
+
+    <div class="product-grid">
+
+      <div class="card">
+
+        <div class="card-image">
+          <img src="farabag1.jpeg"
+               alt="کیف FaraBag">
+        </div>
+
+        <div class="card-content">
+
+          <h3>FaraBag Collection</h3>
+
+          <p>
+            طراحی شیک و مدرن با جزئیاتی خاص
+          </p>
+
+          <a class="btn btn-primary"
+             href="https://www.instagram.com/faraa.bag"
+             target="_blank">
+            سفارش
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="card">
+
+        <div class="card-image">
+          <img src="farabag1.jpeg"
+               alt="کیف زنانه">
+        </div>
+
+        <div class="card-content">
+
+          <h3>Luxury Edition</h3>
+
+          <p>
+            مناسب استایل‌های روزمره و خاص
+          </p>
+
+          <a class="btn btn-primary"
+             href="https://www.instagram.com/faraa.bag"
+             target="_blank">
+            مشاهده
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="card">
+
+        <div class="card-image">
+          <img src="farabag1.jpeg"
+               alt="کیف لوکس">
+        </div>
+
+        <div class="card-content">
+
+          <h3>Premium Style</h3>
+
+          <p>
+            ظرافت، کیفیت و استایل در یک انتخاب
+          </p>
+
+          <a class="btn btn-primary"
+             href="https://www.instagram.com/faraa.bag"
+             target="_blank">
+            سفارش
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+
+    <div class="about-box">
+
+      <h2>FaraBag</h2>
+
+      <p>
+        ما در FaraBag تلاش می‌کنیم مجموعه‌ای از کیف‌های
+        خاص و جذاب را برای کسانی ارائه کنیم که به
+        زیبایی، کیفیت و متفاوت بودن اهمیت می‌دهند.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="logo">FaraBag</div>
+
+    <p>
+      Luxury Bags • Premium Style
+    </p>
+
+    <div class="social">
+
+      <a href="https://www.instagram.com/faraa.bag"
+         target="_blank">
+        @faraa.bag
       </a>
 
     </div>
 
-  </main>
-
-  <footer>
-    © 2026 FaraBag — All Rights Reserved
   </footer>
 
 </body>

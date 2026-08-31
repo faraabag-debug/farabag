@@ -1,266 +1,782 @@
-<!-- FaraBag | کیف و کفش -->
-<section class="fara-collection">
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <div class="fara-heading">
-    <div class="fara-mini">FARA BAG</div>
-    <h2>کیف <span>&</span> کفش</h2>
-    <p>کلکسیونی از انتخاب‌های خاص و دوست‌داشتنی</p>
-  </div>
-
-  <div class="fara-brand">
-    <span>Fara</span><strong>Bag</strong>
-  </div>
-
-  <div class="fara-products">
-
-    <article class="fara-card">
-      <div class="fara-photo">
-        <img src="farabag1.jpeg" alt="FaraBag کیف و کفش">
-        <span class="fara-tag">01</span>
-      </div>
-      <h3>FaraBag</h3>
-      <p>کیف و کفش</p>
-      <button>مشاهده محصول</button>
-    </article>
-
-    <article class="fara-card">
-      <div class="fara-photo">
-        <img src="farabag2.jpeg" alt="FaraBag کیف و کفش">
-        <span class="fara-tag">02</span>
-      </div>
-      <h3>FaraBag</h3>
-      <p>کیف و کفش</p>
-      <button>مشاهده محصول</button>
-    </article>
-
-    <article class="fara-card">
-      <div class="fara-photo">
-        <img src="farabag3.jpeg" alt="FaraBag کیف و کفش">
-        <span class="fara-tag">03</span>
-      </div>
-      <h3>FaraBag</h3>
-      <p>کیف و کفش</p>
-      <button>مشاهده محصول</button>
-    </article>
-
-    <article class="fara-card">
-      <div class="fara-photo">
-        <img src="farabag4.jpeg" alt="FaraBag کیف و کفش">
-        <span class="fara-tag">04</span>
-      </div>
-      <h3>FaraBag</h3>
-      <p>کیف و کفش</p>
-      <button>مشاهده محصول</button>
-    </article>
-
-    <article class="fara-card">
-      <div class="fara-photo">
-        <img src="farabag5.jpeg" alt="FaraBag کیف و کفش">
-        <span class="fara-tag">05</span>
-      </div>
-      <h3>FaraBag</h3>
-      <p>کیف و کفش</p>
-      <button>مشاهده محصول</button>
-    </article>
-
-  </div>
-</section>
+<title>FaraBag | کیف و کفش</title>
 
 <style>
-.fara-collection {
-  direction: rtl;
-  padding: 80px 18px;
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap');
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Vazirmatn',sans-serif;
+  background:#f5efe6;
+  color:#3b2a22;
+}
+
+/* HEADER */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(250,246,239,.94);
+  backdrop-filter:blur(15px);
+  border-bottom:1px solid #dfd1c1;
+}
+
+.nav{
+  max-width:1150px;
+  margin:auto;
+  padding:15px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  text-decoration:none;
+  color:#3b2a22;
+  font-size:28px;
+  font-weight:900;
+}
+
+.logo span{
+  color:#a47c55;
+}
+
+.manager{
+  font-size:10px;
+  color:#8c715c;
+  margin-top:2px;
+}
+
+.nav-links{
+  display:flex;
+  gap:22px;
+}
+
+.nav-links a{
+  color:#5b473b;
+  text-decoration:none;
+  font-size:12px;
+}
+
+/* HERO */
+
+.hero{
+  max-width:1150px;
+  margin:auto;
+  min-height:560px;
+  padding:80px 25px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+.hero-box{
+  width:100%;
+  padding:65px 25px;
+  border-radius:35px;
   background:
-    radial-gradient(circle at top, #303030 0%, #151515 38%, #0b0b0b 100%);
-  color: #fff;
-  overflow: hidden;
+    radial-gradient(circle at 50% 20%,#fffdf9,#eadbca);
+  border:1px solid #dfcdbb;
+  box-shadow:
+    0 25px 60px rgba(87,58,38,.12),
+    inset 0 1px 0 #fff;
 }
 
-.fara-heading {
-  text-align: center;
-  margin-bottom: 20px;
+.small-title{
+  font-size:11px;
+  letter-spacing:5px;
+  color:#a47c55;
+  margin-bottom:18px;
 }
 
-.fara-mini {
-  font-size: 11px;
-  letter-spacing: 6px;
-  color: #bdbdbd;
-  margin-bottom: 12px;
-}
-
-.fara-heading h2 {
-  margin: 0;
-  font-size: clamp(34px, 7vw, 58px);
-  font-weight: 900;
-  letter-spacing: -2px;
+.hero h1{
+  font-size:clamp(60px,12vw,105px);
+  line-height:.95;
+  color:#4a3428;
+  font-weight:900;
+  letter-spacing:-5px;
   text-shadow:
-    0 2px 0 #777,
-    0 5px 12px rgba(0,0,0,.8);
+    0 3px 0 #c7b09a,
+    0 8px 18px rgba(70,45,30,.15);
 }
 
-.fara-heading h2 span {
-  color: #aaa;
-  margin: 0 5px;
+.hero h1 span{
+  color:#a47c55;
 }
 
-.fara-heading p {
-  color: #aaa;
-  font-size: 14px;
-  margin-top: 12px;
+.hero h2{
+  margin-top:18px;
+  font-size:18px;
+  font-weight:700;
+  color:#654b3b;
 }
 
-.fara-brand {
-  width: max-content;
-  margin: 30px auto 42px;
-  padding: 10px 25px;
-  border-radius: 50px;
-  background: linear-gradient(145deg,#292929,#111);
-  border: 1px solid #555;
+.hero p{
+  max-width:600px;
+  margin:18px auto;
+  color:#806c5c;
+  font-size:14px;
+  line-height:2;
+}
+
+.manager-badge{
+  display:inline-block;
+  margin-top:12px;
+  padding:9px 20px;
+  border-radius:30px;
+  background:#fffaf4;
+  border:1px solid #d8c3ae;
+  color:#755a46;
+  font-size:12px;
+  box-shadow:0 8px 20px rgba(70,45,30,.08);
+}
+
+.hero-btn{
+  display:inline-block;
+  margin-top:25px;
+  padding:13px 28px;
+  border-radius:30px;
+  background:#654838;
+  color:#fff;
+  text-decoration:none;
+  font-size:12px;
+  box-shadow:0 10px 25px rgba(70,45,30,.18);
+  transition:.3s;
+}
+
+.hero-btn:hover{
+  transform:translateY(-3px);
+  background:#4b3327;
+}
+
+/* PRODUCTS */
+
+.collection{
+  max-width:1200px;
+  margin:auto;
+  padding:75px 18px;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:42px;
+}
+
+.section-title .mini{
+  color:#a47c55;
+  letter-spacing:4px;
+  font-size:10px;
+}
+
+.section-title h2{
+  margin-top:10px;
+  font-size:42px;
+  color:#4a3428;
+  text-shadow:0 2px 0 #d7c5b3;
+}
+
+.section-title p{
+  color:#8a7667;
+  font-size:13px;
+  margin-top:8px;
+}
+
+.products{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:18px;
+}
+
+.product{
+  background:#fffaf5;
+  border:1px solid #dfcfbf;
+  border-radius:25px;
+  padding:8px;
   box-shadow:
-    inset 0 1px 1px #666,
-    0 12px 25px rgba(0,0,0,.5);
-  font-size: 25px;
-  font-weight: 900;
-  letter-spacing: -1px;
+    0 15px 35px rgba(77,51,35,.10),
+    inset 0 1px 0 #fff;
+  transition:.4s;
 }
 
-.fara-brand span {
-  color: #eee;
+.product:hover{
+  transform:translateY(-8px);
+  box-shadow:0 22px 45px rgba(77,51,35,.16);
 }
 
-.fara-brand strong {
-  color: #aaa;
-  margin-right: 3px;
+.product-image{
+  position:relative;
+  aspect-ratio:1/1.15;
+  overflow:hidden;
+  border-radius:19px;
+  background:#eee4d8;
 }
 
-.fara-products {
-  max-width: 1250px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 18px;
+.product-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition:.5s;
 }
 
-.fara-card {
-  position: relative;
-  padding: 10px;
-  border-radius: 25px;
-  background: linear-gradient(145deg,#292929,#121212);
-  border: 1px solid #444;
-  box-shadow:
-    0 18px 35px rgba(0,0,0,.45),
-    inset 0 1px 1px rgba(255,255,255,.12);
-  transition: .4s ease;
-  text-align: center;
+.product:hover img{
+  transform:scale(1.05);
 }
 
-.fara-card:hover {
-  transform: translateY(-10px) scale(1.015);
-  border-color: #888;
+.product-number{
+  position:absolute;
+  top:10px;
+  right:10px;
+  width:32px;
+  height:32px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:rgba(255,250,244,.9);
+  border:1px solid #d1bca7;
+  color:#654838;
+  font-size:10px;
 }
 
-.fara-photo {
-  position: relative;
-  aspect-ratio: 1 / 1.12;
-  border-radius: 19px;
-  overflow: hidden;
-  background: #222;
+.product-info{
+  text-align:center;
+  padding:15px 6px 10px;
 }
 
-.fara-photo::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(255,255,255,.13),
-    transparent 35%,
-    transparent 70%,
-    rgba(255,255,255,.05)
-  );
-  pointer-events: none;
+.product-info h3{
+  color:#513a2d;
+  font-size:18px;
+  font-weight:900;
 }
 
-.fara-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: .5s ease;
+.product-info p{
+  color:#9a8370;
+  font-size:11px;
+  margin:5px 0 12px;
 }
 
-.fara-card:hover .fara-photo img {
-  transform: scale(1.07);
+.product-link{
+  display:block;
+  padding:9px;
+  border-radius:25px;
+  border:1px solid #cbb5a0;
+  color:#654838;
+  text-decoration:none;
+  font-size:11px;
+  transition:.3s;
 }
 
-.fara-tag {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  z-index: 2;
-  width: 32px;
-  height: 32px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  background: rgba(20,20,20,.82);
-  border: 1px solid #777;
-  font-size: 10px;
-  box-shadow: 0 5px 12px rgba(0,0,0,.5);
+.product-link:hover{
+  background:#654838;
+  color:#fff;
 }
 
-.fara-card h3 {
-  margin: 15px 0 3px;
-  font-size: 20px;
-  font-weight: 900;
-  text-shadow: 0 2px 4px #000;
+/* BRAND */
+
+.brand{
+  max-width:950px;
+  margin:20px auto 80px;
+  padding:55px 20px;
+  text-align:center;
+  border-radius:35px;
+  background:linear-gradient(145deg,#ead9c6,#fffaf4);
+  border:1px solid #ddc8b2;
+  box-shadow:0 20px 50px rgba(80,55,38,.10);
 }
 
-.fara-card p {
-  margin: 0 0 13px;
-  color: #aaa;
-  font-size: 12px;
+.brand-name{
+  font-size:clamp(50px,10vw,85px);
+  font-weight:900;
+  color:#4b3529;
+  text-shadow:
+    0 3px 0 #c5aa91,
+    0 8px 15px rgba(70,45,30,.13);
 }
 
-.fara-card button {
-  border: 1px solid #666;
-  background: #222;
-  color: #fff;
-  padding: 9px 15px;
-  border-radius: 30px;
-  cursor: pointer;
-  font-family: inherit;
-  transition: .3s;
+.brand-name span{
+  color:#a47c55;
 }
 
-.fara-card button:hover {
-  background: #eee;
-  color: #111;
+.brand p{
+  margin-top:8px;
+  color:#806957;
+  font-size:13px;
 }
 
-@media (max-width: 1050px) {
-  .fara-products {
-    grid-template-columns: repeat(3, 1fr);
+/* FEATURES */
+
+.features{
+  max-width:1000px;
+  margin:0 auto 80px;
+  padding:0 18px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+}
+
+.feature{
+  text-align:center;
+  background:#fffaf5;
+  border:1px solid #dfcfbf;
+  border-radius:23px;
+  padding:25px 15px;
+  box-shadow:0 12px 30px rgba(80,55,38,.07);
+}
+
+.feature-icon{
+  font-size:28px;
+  margin-bottom:10px;
+}
+
+.feature h3{
+  font-size:14px;
+  color:#523a2c;
+}
+
+.feature p{
+  margin-top:7px;
+  font-size:11px;
+  color:#957f6d;
+}
+
+/* CTA */
+
+.cta{
+  padding:80px 20px;
+  text-align:center;
+  background:#eadbca;
+  border-top:1px solid #ddc6af;
+  border-bottom:1px solid #ddc6af;
+}
+
+.cta h2{
+  font-size:38px;
+  color:#4a3428;
+  text-shadow:0 2px 0 #cbb39c;
+}
+
+.cta p{
+  color:#806a58;
+  font-size:13px;
+  margin:12px 0 22px;
+}
+
+.cta a{
+  display:inline-block;
+  padding:12px 25px;
+  border-radius:30px;
+  background:#654838;
+  color:#fff;
+  text-decoration:none;
+  font-size:12px;
+}
+
+/* FOOTER */
+
+footer{
+  background:#3d2b22;
+  color:#fff;
+  text-align:center;
+  padding:45px 20px 30px;
+}
+
+.footer-logo{
+  font-size:30px;
+  font-weight:900;
+}
+
+.footer-logo span{
+  color:#d1ad88;
+}
+
+.footer-manager{
+  margin-top:7px;
+  color:#d5c0ab;
+  font-size:11px;
+}
+
+.footer-text{
+  margin:15px 0 20px;
+  color:#bca99a;
+  font-size:11px;
+}
+
+.footer-links{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.footer-links a{
+  text-decoration:none;
+  color:#fff;
+  border:1px solid #745b4b;
+  padding:9px 15px;
+  border-radius:30px;
+  font-size:11px;
+}
+
+.copy{
+  margin-top:25px;
+  color:#907b6b;
+  font-size:9px;
+}
+
+/* MOBILE */
+
+@media(max-width:1050px){
+  .products{
+    grid-template-columns:repeat(3,1fr);
   }
 }
 
-@media (max-width: 650px) {
-  .fara-products {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+@media(max-width:650px){
+
+  .nav{
+    padding:13px;
   }
 
-  .fara-collection {
-    padding: 55px 12px;
+  .nav-links{
+    gap:10px;
   }
 
-  .fara-card {
-    border-radius: 20px;
-    padding: 7px;
+  .nav-links a{
+    font-size:9px;
   }
 
-  .fara-card h3 {
-    font-size: 17px;
+  .hero{
+    min-height:500px;
+    padding:35px 12px;
+  }
+
+  .hero-box{
+    padding:55px 15px;
+  }
+
+  .hero h1{
+    font-size:68px;
+  }
+
+  .collection{
+    padding:55px 10px;
+  }
+
+  .products{
+    grid-template-columns:repeat(2,1fr);
+    gap:11px;
+  }
+
+  .product{
+    border-radius:20px;
+    padding:6px;
+  }
+
+  .product-image{
+    border-radius:15px;
+  }
+
+  .product-info h3{
+    font-size:16px;
+  }
+
+  .features{
+    grid-template-columns:1fr;
+  }
+
+  .brand{
+    margin:10px 12px 60px;
+  }
+
+  .cta h2{
+    font-size:30px;
   }
 }
 </style>
+</head>
+
+<body>
+
+<header>
+  <nav class="nav">
+
+    <div>
+      <a href="#" class="logo">
+        Fara<span>Bag</span>
+      </a>
+      <div class="manager">
+        با مدیریت خانم معینی
+      </div>
+    </div>
+
+    <div class="nav-links">
+      <a href="#collection">محصولات</a>
+      <a href="#about">درباره ما</a>
+      <a href="#contact">تماس</a>
+    </div>
+
+  </nav>
+</header>
+
+
+<section class="hero">
+
+  <div class="hero-box">
+
+    <div class="small-title">
+      F A R A B A G
+    </div>
+
+    <h1>
+      Fara<span>Bag</span>
+    </h1>
+
+    <h2>
+      دنیای کیف و کفش‌های خاص
+    </h2>
+
+    <p>
+      انتخاب‌هایی شیک و دوست‌داشتنی برای
+      کسانی که به جزئیات استایل خود اهمیت می‌دهند.
+    </p>
+
+    <div class="manager-badge">
+      با مدیریت خانم معینی
+    </div>
+
+    <br>
+
+    <a href="#collection" class="hero-btn">
+      مشاهده کلکسیون
+    </a>
+
+  </div>
+
+</section>
+
+
+<section class="collection" id="collection">
+
+  <div class="section-title">
+
+    <div class="mini">
+      FARA BAG COLLECTION
+    </div>
+
+    <h2>
+      کیف و کفش
+    </h2>
+
+    <p>
+      مجموعه‌ای خاص از FaraBag
+    </p>
+
+  </div>
+
+
+  <div class="products">
+
+    <article class="product">
+
+      <div class="product-image">
+        <img src="farabag1.jpeg" alt="FaraBag محصول 1">
+        <span class="product-number">01</span>
+      </div>
+
+      <div class="product-info">
+        <h3>FaraBag</h3>
+        <p>کیف و کفش</p>
+        <a href="#contact" class="product-link">مشاهده و سفارش</a>
+      </div>
+
+    </article>
+
+
+    <article class="product">
+
+      <div class="product-image">
+        <img src="farabag2.jpeg" alt="FaraBag محصول 2">
+        <span class="product-number">02</span>
+      </div>
+
+      <div class="product-info">
+        <h3>FaraBag</h3>
+        <p>کیف و کفش</p>
+        <a href="#contact" class="product-link">مشاهده و سفارش</a>
+      </div>
+
+    </article>
+
+
+    <article class="product">
+
+      <div class="product-image">
+        <img src="farabag3.jpeg" alt="FaraBag محصول 3">
+        <span class="product-number">03</span>
+      </div>
+
+      <div class="product-info">
+        <h3>FaraBag</h3>
+        <p>کیف و کفش</p>
+        <a href="#contact" class="product-link">مشاهده و سفارش</a>
+      </div>
+
+    </article>
+
+
+    <article class="product">
+
+      <div class="product-image">
+        <img src="farabag4.jpeg" alt="FaraBag محصول 4">
+        <span class="product-number">04</span>
+      </div>
+
+      <div class="product-info">
+        <h3>FaraBag</h3>
+        <p>کیف و کفش</p>
+        <a href="#contact" class="product-link">مشاهده و سفارش</a>
+      </div>
+
+    </article>
+
+
+    <article class="product">
+
+      <div class="product-image">
+        <img src="farabag5.jpeg" alt="FaraBag محصول 5">
+        <span class="product-number">05</span>
+      </div>
+
+      <div class="product-info">
+        <h3>FaraBag</h3>
+        <p>کیف و کفش</p>
+        <a href="#contact" class="product-link">مشاهده و سفارش</a>
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<section class="brand" id="about">
+
+  <div class="brand-name">
+    Fara<span>Bag</span>
+  </div>
+
+  <p>
+    با مدیریت خانم معینی
+  </p>
+
+  <p>
+    زیبایی در انتخاب‌های ساده و خاص است.
+  </p>
+
+</section>
+
+
+<section class="features">
+
+  <div class="feature">
+    <div class="feature-icon">👜</div>
+    <h3>کیف‌های خاص</h3>
+    <p>انتخاب‌های شیک و متفاوت</p>
+  </div>
+
+  <div class="feature">
+    <div class="feature-icon">👟</div>
+    <h3>کفش‌های جذاب</h3>
+    <p>تکمیل‌کننده استایل شما</p>
+  </div>
+
+  <div class="feature">
+    <div class="feature-icon">♡</div>
+    <h3>انتخاب با عشق</h3>
+    <p>برای خاص‌پسندها</p>
+  </div>
+
+</section>
+
+
+<section class="cta">
+
+  <h2>
+    انتخابت رو خاص کن ♡
+  </h2>
+
+  <p>
+    برای دیدن محصولات بیشتر با FaraBag همراه باش.
+  </p>
+
+  <a
+    href="https://www.instagram.com/faraa.bag"
+    target="_blank"
+  >
+    اینستاگرام FaraBag
+  </a>
+
+</section>
+
+
+<footer id="contact">
+
+  <div class="footer-logo">
+    Fara<span>Bag</span>
+  </div>
+
+  <div class="footer-manager">
+    با مدیریت خانم معینی
+  </div>
+
+  <div class="footer-text">
+    فروشگاه کیف و کفش FaraBag
+  </div>
+
+  <div class="footer-links">
+
+    <a
+      href="https://www.instagram.com/faraa.bag"
+      target="_blank"
+    >
+      اینستاگرام
+    </a>
+
+    <a href="tel:09023631213">
+      09023631213
+    </a>
+
+    <a
+      href="https://wa.me/989023631213"
+      target="_blank"
+    >
+      واتساپ
+    </a>
+
+  </div>
+
+  <div class="copy">
+    © 2026 FaraBag — All Rights Reserved
+  </div>
+
+</footer>
+
+</body>
+</html>
